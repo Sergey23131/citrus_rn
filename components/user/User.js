@@ -1,6 +1,6 @@
 import React from 'react';
 import {StatusBar} from "expo-status-bar";
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 export default function User({item}) {
     return (
@@ -12,14 +12,14 @@ export default function User({item}) {
 }
 
 const styles = StyleSheet.create({
-userBox:{
-    flex:1,
-    backgroundColor:'silver',
-    justifyContent: 'center',
-    textAlign: 'center',
-    marginBottom:3,
-    width: '70%',
-    height:100
-}
+    userBox: {
+        flex: 1,
+        backgroundColor: 'silver',
+        justifyContent: 'center',
+        textAlign: 'center',
+        marginBottom: 3,
+        width: '70%',
+        height: 100
+    }
 
 });
