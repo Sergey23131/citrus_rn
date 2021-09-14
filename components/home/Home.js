@@ -1,14 +1,19 @@
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {createDrawerNavigator} from "@react-navigation/drawer";
+import About from "../About/About";
+import Company from "../company/Company";
 
+
+const Drawer= createDrawerNavigator;
 
 export default function Home() {
     return (
-        <View style={styles.container}>
-            <Text>Home</Text>
-            <StatusBar style="auto"/>
-        </View>
+            <Drawer.Navigator initialRouteName="About">
+                <Drawer.Screen name="About" component={About} />
+                <Drawer.Screen name="Company" component={Company} />
+            </Drawer.Navigator>
     );
 }
 
