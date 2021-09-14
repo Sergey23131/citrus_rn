@@ -9,7 +9,7 @@ export default function UserScreen(props) {
     const {route: {params: {data}}, navigation} = props
     return (
         <View style={styles.container}>
-            <Text>{data.name} - {data.email }</Text>
+            <Text>{data.name} - {data.email}</Text>
             <StatusBar style="auto"/>
         </View>
     );

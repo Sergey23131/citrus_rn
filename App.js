@@ -5,18 +5,18 @@ import Home from "./components/home/Home";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import UserScreen from "./screens/User.screen";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import UsersPageNavigator from "./screens/UsersPageNavigator";
 
-let StackNavigator = createStackNavigator();
+let BottomTabNavigator = createBottomTabNavigator();
 
 export default function App() {
     return (
         <NavigationContainer>
-            <StackNavigator.Navigator initialRouteName="Users">
-                <StackNavigator.Screen name={'Users'} component={Users}/>
-                <StackNavigator.Screen name={'Home'} component={Home}/>
-                <StackNavigator.Screen name={'UserDetails'} component={UserScreen}/>
-
-            </StackNavigator.Navigator>
+            <BottomTabNavigator.Navigator>
+                <BottomTabNavigator.Screen name={'Users'} component={UsersPageNavigator}/>
+                <BottomTabNavigator.Screen name={"Home"} component={Home}/>
+            </BottomTabNavigator.Navigator>
         </NavigationContainer>
     );
 }
