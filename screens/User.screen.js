@@ -11,12 +11,14 @@ export default function UserScreen(props) {
         navigate('Posts', {data});
     };
 
-    console.log(data)
 
     return (
         <View style={styles.container}>
-            <Text>{data.name} - {data.title}</Text>
-            <Button title={'user datalist'} onPress={onPress}/>
+            <Text>NAME - {data.name} <br/>
+                User name - {data.username} <br/>
+                Email - {data.email} <br/>
+                Phone number - {data.phone}</Text>
+            <Button title={'Posts'} onPress={onPress}/>
 
         </View>
     );

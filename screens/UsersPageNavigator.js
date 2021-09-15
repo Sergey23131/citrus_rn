@@ -15,7 +15,7 @@ export default function UsersPageNavigator(props) {
     return (
         <StackNavigator.Navigator>
             <StackNavigator.Screen name={'users'} component={Users}/>
-            <StackNavigator.Screen name={'UserDetails'} component={UserScreen}/>
+            <StackNavigator.Screen name={'Info'} component={UserScreen}/>
             <StackNavigator.Screen name={'Posts'} component={Home}/>
             <StackNavigator.Screen name={'PostsScreen'} component={PostScreen}/>
         </StackNavigator.Navigator>

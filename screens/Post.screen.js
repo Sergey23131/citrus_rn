@@ -6,7 +6,7 @@ export default function PostScreen({item}) {
 
     return (
         <View style={[styles.container]}>
-            <Text>Posts</Text>
+            <Text>-{item.title}</Text>
             <StatusBar style="auto"/>
         </View>
     );
