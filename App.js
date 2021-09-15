@@ -7,6 +7,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 import UserScreen from "./screens/User.screen";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import UsersPageNavigator from "./screens/UsersPageNavigator";
+import PostScreen from "./screens/Post.screen";
 
 let BottomTabNavigator = createBottomTabNavigator();
 
@@ -15,7 +16,7 @@ export default function App() {
         <NavigationContainer>
             <BottomTabNavigator.Navigator>
                 <BottomTabNavigator.Screen name={'Users'} component={UsersPageNavigator}/>
-                <BottomTabNavigator.Screen name={"Home"} component={Home}/>
+
             </BottomTabNavigator.Navigator>
         </NavigationContainer>
     );

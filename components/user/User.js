@@ -2,6 +2,7 @@ import React from 'react';
 import {StatusBar} from "expo-status-bar";
 import {Button, StyleSheet, Text, View} from 'react-native';
 
+
 export default function User(props) {
     const {item, nav: {navigate}} = props;
 
@@ -13,7 +14,7 @@ export default function User(props) {
         <View style={[styles.userBox]}>
             <Text>{item.name}</Text>
             <Button title={'user datalist'} onPress={onPress}/>
-            <StatusBar style="auto"/>
+
         </View>
     );
 }

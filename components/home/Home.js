@@ -1,24 +1,31 @@
-import {StatusBar} from 'expo-status-bar';
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {createDrawerNavigator} from "@react-navigation/drawer";
-import About from "../About/About";
-import Company from "../company/Company";
+import React, {useEffect, useState} from 'react';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {getPosts} from "../../services/services";
+import PostScreen from "../../screens/Post.screen";
 
+export default function Home(props) {
+    const {route: {params: {data}}} = props
 
-const Drawer= createDrawerNavigator;
+    const [post, setPost] = useState();
 
-export default function Home() {
+    useEffect(() => {
+        getPosts(data.id).then(value => setPost(value))
+    }, [])
+
     return (
-            <Drawer.Navigator initialRouteName="About">
-                <Drawer.Screen name="About" component={About} />
-                <Drawer.Screen name="Company" component={Company} />
-            </Drawer.Navigator>
+        <View style={styles.container}>
+            <FlatList
+                data={post}
+                renderItem={({item}) => <PostScreen item={item}/>}
+                keyExtractor={item => '' + item.id}
+            />
+        </View>
+
     );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
+    container: {
+        flex: 1,
     }
 });
