@@ -2,11 +2,11 @@ import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
+export default function PostScreen({item}) {
 
-export default function Company() {
     return (
-        <View style={styles.container}>
-            <Text>Company</Text>
+        <View style={[styles.container]}>
+            <Text>Posts</Text>
             <StatusBar style="auto"/>
         </View>
     );
